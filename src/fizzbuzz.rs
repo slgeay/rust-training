@@ -1,18 +1,17 @@
 fn fizzbuzz(i: u32) -> String {
-    let mut res = String::from("");
-    if i%3 == 0 {
-        res.push_str("Fizz")
+    if i % 15 == 0 {
+        String::from("FizzBuzz")
+    } else if i%3 == 0 {
+        String::from("Fizz")
+    } else if i%5 == 0 {
+        String::from("Buzz")
+    } else {
+        i.to_string()
     }
-    if i%5 == 0 {
-        res.push_str("Buzz")
-    }
-    if res.is_empty() {
-        return i.to_string()
-    }
-    res
 }
 
 pub(crate) fn main() {
+    println!("<<< FizzBuzz >>>");
     for i in 1..=100 {
         println!("{}", fizzbuzz(i));
     }
