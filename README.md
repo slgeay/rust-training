@@ -62,7 +62,7 @@
 
 ## Exercices
 
-<details>
+<details open>
 <summary>Day 1</summary>
 
 - [FizzBuzz](src/fizzbuzz.rs)
