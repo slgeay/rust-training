@@ -80,5 +80,8 @@
     - 07 Structs
     - 08 Enums
     - 09 Strings
+    - 10 Modules
+    - 11 HashMaps
+    - Quiz 2
 
 </details>
