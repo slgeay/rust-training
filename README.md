@@ -8,7 +8,6 @@
 ### Rust
 
 - [Install Rust](https://www.rust-lang.org/tools/install)
-- [Install Rustup](https://rustup.rs/)
 
 ### Cargo
 
@@ -69,17 +68,17 @@
 - [FizzBuzz](src/fizzbuzz.rs)
 - [Narcissistic Number Check](src/narcissistic_number_check.rs)
 - [Rust Latin](src/rustlatin.rs)
-- Rustlings:
-    - [00 Intro](../rustlings/exercises/00_intro)
-    - [01 Variables](rustlings/exercises/01_variables)
-    - [02 Functions](rustlings/exercises/02_functions)
-    - [03 If](rustlings/exercises/03_if)
-    - [Quiz 1](rustlings/exercises/quiz1.rs)
-    - [04 Primitive Types](rustlings/exercises/04_primitive_types)
-    - [05 Vecs](rustlings/exercises/05_vecs)
-    - [06 Move Semantics](rustlings/exercises/06_move_semantics)
-    - [07 Structs](rustlings/exercises/07_structs)
-    - [08 Enums](rustlings/exercises/08_enums)
-    - [09 Strings](rustlings/exercises/09_strings)
+- [Rustlings](https://github.com/slgeay/rustlings/tree/main/exercises)
+    - 00 Intro
+    - 01 Variables
+    - 02 Functions
+    - 03 If
+    - Quiz 1
+    - 04 Primitive Types
+    - 05 Vecs
+    - 06 Move Semantics
+    - 07 Structs
+    - 08 Enums
+    - 09 Strings
 
 </details>
