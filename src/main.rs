@@ -1,9 +1,9 @@
 mod fizzbuzz;
-mod fizzbuzzmatch;
+mod fizzbuzz_match;
 mod rustlatin;
 
 fn main() {
     fizzbuzz::main();
-    fizzbuzzmatch::main();
+    fizzbuzz_match::main();
     rustlatin::main();
 }
