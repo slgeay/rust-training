@@ -2,6 +2,9 @@
 
 ## Setup
 
+<details>
+<summary>Installation</summary>
+
 ### Rust
 
 - [Install Rust](https://www.rust-lang.org/tools/install)
@@ -21,7 +24,12 @@
 - [Crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates) - extra features for `Cargo.toml` files
 - [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) - C/C++ debugger with Rust support
 
+</details>
+
 ## Material
+
+<details>
+<summary>Course, exercices, docs</summary>
 
 - [Rust Slides](https://github.com/ferrous-systems/rust-training) ([Online Version](https://listochkin.ngrok-free.app/slides/))
 - [Rust Exercises](https://github.com/ferrous-systems/rust-exercises)
@@ -31,8 +39,14 @@
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
 - [Rustlings](https://github.com/rust-lang/rustlings)
 - [Rust Playground](https://play.rust-lang.org/)
+- [Rust Cheatsheet](https://cheats.rs/)
 
-## Useful crates (libraries)
+</details>
+
+## Crates
+
+<details>
+<summary>Useful libraries</summary>
 
 - [anyhow](https://docs.rs/anyhow/latest/anyhow/) - application-level error handling
 - [thiserror](https://docs.rs/thiserror/latest/thiserror/) - error development for libraries
@@ -45,15 +59,18 @@
 - [itertools](https://docs.rs/itertools/latest/itertools/index.html) - more functions for iteration
 - [tokio](https://tokio.rs) - async runtime and related libraries for Rust
 
+</details>
+
 ## Exercices
 
-### Day 1
+<details>
+<summary>Day 1</summary>
 
 - [FizzBuzz](src/fizzbuzz.rs)
 - [Narcissistic Number Check](src/narcissistic_number_check.rs)
 - [Rust Latin](src/rustlatin.rs)
 - Rustlings:
-    - [00 Intro](rustlings/exercises/00_intro)
+    - [00 Intro](../rustlings/exercises/00_intro)
     - [01 Variables](rustlings/exercises/01_variables)
     - [02 Functions](rustlings/exercises/02_functions)
     - [03 If](rustlings/exercises/03_if)
@@ -64,3 +81,5 @@
     - [07 Structs](rustlings/exercises/07_structs)
     - [08 Enums](rustlings/exercises/08_enums)
     - [09 Strings](rustlings/exercises/09_strings)
+
+</details>
