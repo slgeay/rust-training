@@ -85,3 +85,10 @@
     - Quiz 2
 
 </details>
+
+<details open>
+<summary>Day 2</summary>
+
+- [Calculator](src/calculator.rs)
+
+</details>
