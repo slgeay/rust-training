@@ -1,5 +1,19 @@
 # Rust Training
 
+## Setup
+
+### Rust
+
+- [Install Rust](https://www.rust-lang.org/tools/install)
+- [Install Rustup](https://rustup.rs/)
+
+### Cargo
+
+- [Install Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
+- [Cargo Book](https://doc.rust-lang.org/cargo/index.html)
+- [Cargo Commands](https://doc.rust-lang.org/cargo/commands/index.html)
+- [Cargo Cheatsheet](https://cheats.rs/#cargo)
+
 ### VSCode Plugins
 
 - [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) - Your 1 stop shop for all things Rust
@@ -17,6 +31,19 @@
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
 - [Rustlings](https://github.com/rust-lang/rustlings)
 - [Rust Playground](https://play.rust-lang.org/)
+
+## Useful crates (libraries)
+
+- [anyhow](https://docs.rs/anyhow/latest/anyhow/) - application-level error handling
+- [thiserror](https://docs.rs/thiserror/latest/thiserror/) - error development for libraries
+- [log](https://crates.io/crates/log) - classical logging
+- [tracing](https://crates.io/crates/tracing) - span-oriented & structured logging, suitable for concurrency
+- [divan](https://crates.io/crates/divan) - statistics-driven microbenchmarking
+- [serde](https://crates.io/crates/serde) - serialize/deserialize data to JSON and other formats
+- [rayon](https://github.com/rayon-rs/rayon) - easy data parallelism
+- [crossbeam](https://github.com/crossbeam-rs/crossbeam) - advanced concurrency primitives
+- [itertools](https://docs.rs/itertools/latest/itertools/index.html) - more functions for iteration
+- [tokio](https://tokio.rs) - async runtime and related libraries for Rust
 
 ## Exercices
 
