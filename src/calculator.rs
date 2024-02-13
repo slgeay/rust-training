@@ -16,11 +16,11 @@ enum EvalError {
 fn eval(expr: &Expr) -> Result<i64, EvalError> {
     match expr {
         Expr::Number(i) => Ok(*i),
-        Expr::Sqr(e) => Ok(i64::pow(eval(e).unwrap(), 2)),
-        Expr::Add(a, b) => Ok(eval(a).unwrap() + eval(b).unwrap()),
-        Expr::Sub(a, b) => Ok(eval(a).unwrap() - eval(b).unwrap()),
-        Expr::Mul(a, b) => Ok(eval(a).unwrap() * eval(b).unwrap()),
-        Expr::Div(a, b) => Ok(eval(a).unwrap() / eval(b).unwrap()),
+        Expr::Sqr(e) => Ok(i64::pow(eval(e)?, 2)),
+        Expr::Add(a, b) => Ok(eval(a)? + eval(b)?),
+        Expr::Sub(a, b) => Ok(eval(a)? - eval(b)?),
+        Expr::Mul(a, b) => Ok(eval(a)? * eval(b)?),
+        Expr::Div(a, b) => Ok(eval(a)? / eval(b)?),
     }
 }
 
