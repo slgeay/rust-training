@@ -1,7 +1,7 @@
 mod fizzbuzz;
 mod fizzbuzz_match;
-mod rustlatin;
 mod narcissistic_number_check;
+mod rustlatin;
 
 fn main() {
     fizzbuzz::main();

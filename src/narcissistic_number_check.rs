@@ -15,8 +15,6 @@ fn is_narcissistic(num: u32) -> bool {
     sum == num
 }
 
-
-
 pub(crate) fn main() {
     println!("<<< Narcissistic Number Check >>>");
     for i in 1..=1000 {
@@ -28,10 +26,7 @@ pub(crate) fn main() {
 
 #[test]
 fn test_get_digits() {
-    assert_eq!(
-        [2,3,1,4,1,5,9,2,6].to_vec(),
-        get_digits(629514132)
-    )
+    assert_eq!([2, 3, 1, 4, 1, 5, 9, 2, 6].to_vec(), get_digits(629514132))
 }
 
 #[test]
