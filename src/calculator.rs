@@ -40,16 +40,19 @@ fn parse(input: &str) -> Result<Expr, ParseError> {
                 stack.push(Expr::Sqr(Box::new(e)));
             },
             "+"|"-"|"*"|"/" => {
-                let (b, a) = (stack.pop().ok_or(ParseError::NotEnoughOperands)?, stack.pop().ok_or(ParseError::NotEnoughOperands)?);
-                stack.push(
-                    match word {
-                        "+" => Expr::Add,
-                        "-" => Expr::Sub,
-                        "*" => Expr::Mul,
-                        _ => Expr::Div
-                    }
-                    (Box::new(a),Box::new(b))
-                );
+                if let (Some(b), Some(a)) = (stack.pop(), stack.pop()) {
+                    stack.push(
+                        match word {
+                            "+" => Expr::Add,
+                            "-" => Expr::Sub,
+                            "*" => Expr::Mul,
+                            _ => Expr::Div
+                        }
+                        (Box::new(a),Box::new(b))
+                    );
+                } else {
+                    return Err(ParseError::NotEnoughOperands);
+                }
             },
             _ => {
                 let num: i64 = word.parse().map_err(|_| ParseError::BadNumber)?;
