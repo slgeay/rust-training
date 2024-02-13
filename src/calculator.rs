@@ -39,21 +39,17 @@ fn parse(input: &str) -> Result<Expr, ParseError> {
                 let e = stack.pop().ok_or(ParseError::NotEnoughOperands)?;
                 stack.push(Expr::Sqr(Box::new(e)));
             },
-            "+" => {
+            "+"|"-"|"*"|"/" => {
                 let (b, a) = (stack.pop().ok_or(ParseError::NotEnoughOperands)?, stack.pop().ok_or(ParseError::NotEnoughOperands)?);
-                stack.push(Expr::Add(Box::new(a),Box::new(b)));
-            },
-            "-" => {
-                let (b, a) = (stack.pop().ok_or(ParseError::NotEnoughOperands)?, stack.pop().ok_or(ParseError::NotEnoughOperands)?);
-                stack.push(Expr::Sub(Box::new(a),Box::new(b)));
-            },
-            "*" => {
-                let (b, a) = (stack.pop().ok_or(ParseError::NotEnoughOperands)?, stack.pop().ok_or(ParseError::NotEnoughOperands)?);
-                stack.push(Expr::Mul(Box::new(a),Box::new(b)));
-            },
-            "/" => {
-                let (b, a) = (stack.pop().ok_or(ParseError::NotEnoughOperands)?, stack.pop().ok_or(ParseError::NotEnoughOperands)?);
-                stack.push(Expr::Div(Box::new(a),Box::new(b)));
+                stack.push(
+                    match word {
+                        "+" => Expr::Add,
+                        "-" => Expr::Sub,
+                        "*" => Expr::Mul,
+                        _ => Expr::Div
+                    }
+                    (Box::new(a),Box::new(b))
+                );
             },
             _ => {
                 let num: i64 = word.parse().map_err(|_| ParseError::BadNumber)?;
