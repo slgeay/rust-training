@@ -1,6 +1,7 @@
 mod fizzbuzz;
 mod narcissistic_number_check;
 mod rustlatin;
+mod calculator;
 
 fn main() {
     fizzbuzz::main();
