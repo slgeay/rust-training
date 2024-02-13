@@ -15,7 +15,7 @@ fn is_narcissistic(num: u32) -> bool {
     sum == num
 }
 
-pub(crate) fn main() {
+pub fn main() {
     println!("<<< Narcissistic Number Check >>>");
     for i in 1..=1000 {
         if is_narcissistic(i) {

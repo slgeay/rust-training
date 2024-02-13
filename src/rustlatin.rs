@@ -13,7 +13,7 @@ fn rustlatin(sentence: &str) -> String {
     new_words.join(" ")
 }
 
-pub(crate) fn main() {
+pub fn main() {
     println!("<<< Rustlatin >>>");
     println!(
         "{}",

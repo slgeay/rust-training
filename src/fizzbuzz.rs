@@ -19,7 +19,7 @@ fn fizzbuzz_match(i: u32) -> String {
     }
 }
 
-pub(crate) fn main() {
+pub fn main() {
     println!("<<< FizzBuzz >>>");
     for i in 1..=100 {
         println!("{}", fizzbuzz(i));
