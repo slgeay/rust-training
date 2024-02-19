@@ -96,12 +96,13 @@
 <details open>
 <summary>Day 3</summary>
 
+- [TCP Server](src/tcp_server.rs)
+
 </details>
 
 <details open>
 <summary>Day 4</summary>
 
 - [Serde Lifetimes](src/serde_lifetimes.rs)
-- [TCP Server](src/tcp_server.rs)
 
 </details>
