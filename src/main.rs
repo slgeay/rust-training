@@ -5,9 +5,9 @@ mod calculator;
 mod serde_lifetimes;
 
 fn main() {
-    fizzbuzz::main();
-    rustlatin::main();
-    narcissistic_number_check::main();
-    calculator::main();
-    let _ = serde_lifetimes::main();
+    // fizzbuzz::main();
+    // rustlatin::main();
+    // narcissistic_number_check::main();
+    // calculator::main();
+    serde_lifetimes::main().unwrap();
 }
