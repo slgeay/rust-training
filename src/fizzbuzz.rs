@@ -1,3 +1,5 @@
+// https://ferrous-systems.github.io/teaching-material/assignments/fizzbuzz.html
+
 fn fizzbuzz(i: u32) -> String {
     if i % 15 == 0 {
         String::from("FizzBuzz")

@@ -1,3 +1,5 @@
+// https://ferrous-systems.github.io/teaching-material/assignments/serde-lifetimes.html
+
 use serde_json::json;
 use std::borrow::Cow;
 

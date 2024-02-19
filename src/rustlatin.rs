@@ -1,3 +1,5 @@
+// https://ferrous-systems.github.io/teaching-material/assignments/rustlatin.html
+
 const VOWELS: [&str; 5] = ["a", "e", "i", "o", "u"];
 
 fn rustlatin(sentence: &str) -> String {

@@ -1,3 +1,5 @@
+// https://ferrous-systems.github.io/teaching-material/assignments/narcissistic-number-check.html
+
 fn get_digits(num: u32) -> Vec<u32> {
     let mut digits: Vec<u32> = Vec::new();
     let mut n = num;
