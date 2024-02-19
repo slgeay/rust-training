@@ -59,7 +59,7 @@ fn parse(input: &str) -> Result<Expr, ParseError> {
                 stack.push(Expr::Number(num));
             }
         }
-        println!("{:?}", stack);
+        eprintln!("{:?}", stack);
     };
     assert_eq!(stack.len(), 1);
     let res = stack.pop().unwrap();
@@ -74,6 +74,15 @@ fn smoke_test() {
     let expr = parse(input).unwrap();
     let value = eval(&expr).unwrap();
     assert_eq!(value, -5);
+}
+
+pub(crate) fn main() {
+    println!("<<< Calculator >>>");
+    let input = "3 sqr 4 sqr + 5 sqr 2 * - 5 /";
+
+    let expr = parse(input).unwrap();
+    let value = eval(&expr).unwrap();
+    println!("{} = {}", input, value);
 }
 
 
