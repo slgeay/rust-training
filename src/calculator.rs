@@ -59,7 +59,7 @@ fn parse(input: &str) -> Result<Expr, ParseError> {
                 stack.push(Expr::Number(num));
             }
         }
-        eprintln!("{:?}", stack);
+        // eprintln!("{:?}", stack);
     };
     assert_eq!(stack.len(), 1);
     let res = stack.pop().unwrap();
