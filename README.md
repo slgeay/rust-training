@@ -97,6 +97,7 @@
 <summary>Day 3</summary>
 
 - [TCP Server](src/tcp_server.rs)
+- [Shapes](src/shapes.rs)
 
 </details>
 
