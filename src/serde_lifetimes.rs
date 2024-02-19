@@ -1,4 +1,6 @@
-use serde_json::{json, Value};
+use serde_json::json;
+use std::borrow::Cow;
+
 
 // pretend that we call an API and get a JSON String back
 fn fetch_data() -> String {
@@ -6,7 +8,7 @@ fn fetch_data() -> String {
         r#"
             {
                 "id": 1,
-                "title": "Hello, Rust"
+                "title": "Hello, \"Rust\""
             }
         "#,
     )
@@ -16,7 +18,7 @@ fn fetch_data() -> String {
 struct BlogPost<'lifetime> {
     id: u32,
 
-    title: &'lifetime str,
+    title: Cow<'lifetime, str>,
 }
 
 pub fn main() -> Result<(), serde_json::Error> {
