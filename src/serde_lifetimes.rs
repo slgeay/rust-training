@@ -13,20 +13,23 @@ fn fetch_data() -> String {
 }
 
 #[derive(Debug)]
-struct BlogPost {
+struct BlogPost<'lifetime> {
     id: u32,
 
-    title: String,
+    title: &'lifetime str,
 }
 
 pub fn main() -> Result<(), serde_json::Error> {
     println!("<<< Serde Lifetimes >>>");
+    #[allow(unused_assignments)]
+    let mut title_mem = String::new();
     let post: BlogPost = {
         let data = fetch_data();
         let v: Value = serde_json::from_str(&data)?;
+        title_mem = v["title"].as_str().unwrap().to_string();
         BlogPost { 
             id: v["id"].as_u64().unwrap() as u32, 
-            title: v["title"].as_str().unwrap().to_string()
+            title: title_mem.as_str()
         }
     };
     println!("deserialized = {:?}", post);
