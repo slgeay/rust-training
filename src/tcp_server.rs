@@ -20,6 +20,8 @@ fn handle_client(mut stream: TcpStream) -> Result<(), io::Error> {
 }
 
 pub fn main() -> Result<(), io::Error> {
+    println!("<<< TCP Server >>>");
+
     let listener = TcpListener::bind("127.0.0.1:7878")?;
     loop {
         let (stream, _) = listener.accept()?;
