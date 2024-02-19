@@ -11,5 +11,5 @@ fn main() {
     narcissistic_number_check::main();
     calculator::main();
     serde_lifetimes::main().unwrap();
-    tcp_server::main();
+    tcp_server::main().unwrap();
 }

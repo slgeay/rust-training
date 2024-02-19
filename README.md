@@ -102,5 +102,6 @@
 <summary>Day 4</summary>
 
 - [Serde Lifetimes](src/serde_lifetimes.rs)
+- [TCP Server](src/tcp_server.rs)
 
 </details>
