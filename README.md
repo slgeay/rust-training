@@ -92,3 +92,15 @@
 - [Calculator](src/calculator.rs)
 
 </details>
+
+<details open>
+<summary>Day 3</summary>
+
+</details>
+
+<details open>
+<summary>Day 4</summary>
+
+- [Serde Lifetimes](src/serde_lifetimes.rs)
+
+</details>
