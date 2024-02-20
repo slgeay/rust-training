@@ -32,7 +32,9 @@ pub fn main() -> Result<(), io::Error> {
         loop {
             let (stream, _) = listener.accept().unwrap();
             s.spawn({|| {
-                    handle_client(stream, &log).unwrap();
+                    if let Err(e) = handle_client(stream, &log) {
+                        eprintln!("Error: {}", e);
+                    }
                 }
             });
         }
