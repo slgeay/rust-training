@@ -1,8 +1,8 @@
 // https://github.com/ferrous-systems/rust-exercises/blob/main/exercise-book/src/tcp-server.md
 
-use std::{io::{self, BufRead, BufReader, Write}, net::{TcpListener, TcpStream}, thread};
+use std::{io::{self, BufRead, BufReader, Write}, net::{TcpListener, TcpStream}, sync::{Arc, Mutex}, thread};
 
-fn handle_client(mut stream: TcpStream) -> Result<(), io::Error> {
+fn handle_client(mut stream: TcpStream, log: &Mutex<Vec<usize>>) -> Result<(), io::Error> {
     let mut buffer = String::new();
     let mut reader = BufReader::new(stream.try_clone()?); 
     loop {
@@ -10,6 +10,10 @@ fn handle_client(mut stream: TcpStream) -> Result<(), io::Error> {
         match reader.read_line(&mut buffer) {
             Ok(0) => return Ok(()),
             Ok(_) => {
+                {
+                    let mut log = log.lock().expect("Could not lock log");
+                    log.push(buffer.len());
+                }
                 write!(stream, "{}", buffer)?;
             }
             Err(e) => {
@@ -22,11 +26,14 @@ fn handle_client(mut stream: TcpStream) -> Result<(), io::Error> {
 pub fn main() -> Result<(), io::Error> {
     println!("<<< TCP Server >>>");
 
+    let log: Arc<Mutex<Vec<usize>>> = Arc::new(Mutex::new(vec![]));
     let listener = TcpListener::bind("127.0.0.1:7878")?;
     loop {
         let (stream, _) = listener.accept()?;
-        thread::spawn(move || {
-            handle_client(stream).unwrap();
-        });
+        thread::spawn({
+            let log = log.clone(); move || {
+                handle_client(stream, &log).unwrap();
+            }
+    });
     }
 }
