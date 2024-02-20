@@ -1,6 +1,6 @@
 // https://github.com/ferrous-systems/rust-exercises/blob/main/exercise-book/src/tcp-server.md
 
-use std::{io::{self, BufRead, BufReader, Write}, net::{TcpListener, TcpStream}, sync::{Arc, Mutex}, thread};
+use std::{io::{self, BufRead, BufReader, Write}, net::{TcpListener, TcpStream}, sync::Mutex, thread};
 
 fn handle_client(mut stream: TcpStream, log: &Mutex<Vec<usize>>) -> Result<(), io::Error> {
     let mut buffer = String::new();
