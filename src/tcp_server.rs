@@ -26,14 +26,16 @@ fn handle_client(mut stream: TcpStream, log: &Mutex<Vec<usize>>) -> Result<(), i
 pub fn main() -> Result<(), io::Error> {
     println!("<<< TCP Server >>>");
 
-    let log: Arc<Mutex<Vec<usize>>> = Arc::new(Mutex::new(vec![]));
+    let log = Mutex::new(vec![]);
     let listener = TcpListener::bind("127.0.0.1:7878")?;
-    loop {
-        let (stream, _) = listener.accept()?;
-        thread::spawn({
-            let log = log.clone(); move || {
-                handle_client(stream, &log).unwrap();
-            }
+    thread::scope(|s| {
+        loop {
+            let (stream, _) = listener.accept().unwrap();
+            s.spawn({|| {
+                    handle_client(stream, &log).unwrap();
+                }
+            });
+        }
     });
-    }
+    Ok(())
 }
