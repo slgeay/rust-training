@@ -30,15 +30,26 @@
 <details>
 <summary>Course, exercices, docs</summary>
 
-- [Rust Slides](https://github.com/ferrous-systems/rust-training) ([Online Version](https://listochkin.ngrok-free.app/slides/))
-- [Rust Exercises](https://github.com/ferrous-systems/rust-exercises)
-- [Rust by Example](https://doc.rust-lang.org/rust-by-example/index.html)
-- [The Rust Standard Library Docs](https://doc.rust-lang.org/std/index.html)
-- [The Rust Book - Brown University Edition](https://rust-book.cs.brown.edu/title-page.html)
-- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
-- [Rustlings](https://github.com/rust-lang/rustlings)
+### Course
+- [Slides](https://listochkin.ngrok-free.app/slides/) / ([source](https://github.com/ferrous-systems/rust-training))
+- [Exercises](https://github.com/ferrous-systems/rust-exercises)
+- [Teaching Material (legacy)](https://ferrous-systems.github.io/teaching-material/)
+
+### Tools
 - [Rust Playground](https://play.rust-lang.org/)
+
+### Exercices
+- [Rustlings](https://github.com/rust-lang/rustlings)
+- [Rust Quiz](https://dtolnay.github.io/rust-quiz) / ([source](https://github.com/dtolnay/rust-quiz))
+
+### Docs
+- [The Rust Standard Library Docs](https://doc.rust-lang.org/std/)
+- [The Rust Book - Brown University Edition](https://rust-book.cs.brown.edu)
+- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [Rust Cheatsheet](https://cheats.rs/)
+- [The Little Book of Rust Books](https://lborb.github.io/book/)
+
 
 </details>
 
@@ -68,21 +79,7 @@
 - [FizzBuzz](src/fizzbuzz.rs)
 - [Narcissistic Number Check](src/narcissistic_number_check.rs)
 - [Rust Latin](src/rustlatin.rs)
-- [Rustlings](https://github.com/slgeay/rustlings/tree/main/exercises)
-    - 00 Intro
-    - 01 Variables
-    - 02 Functions
-    - 03 If
-    - Quiz 1
-    - 04 Primitive Types
-    - 05 Vecs
-    - 06 Move Semantics
-    - 07 Structs
-    - 08 Enums
-    - 09 Strings
-    - 10 Modules
-    - 11 HashMaps
-    - Quiz 2
+- [Rustlings](https://github.com/slgeay/rustlings/tree/main/exercises) (Exercices 00 to 11, Quizzes 1 and 2)
 
 </details>
 
