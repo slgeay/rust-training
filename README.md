@@ -49,6 +49,7 @@
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [Rust Cheatsheet](https://cheats.rs/)
 - [The Little Book of Rust Books](https://lborb.github.io/book/)
+- [Lib.rs](https://lib.rs/)
 
 
 </details>
