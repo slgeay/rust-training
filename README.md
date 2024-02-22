@@ -33,7 +33,7 @@
 ### Course
 - [Slides](https://listochkin.ngrok-free.app/slides/) / ([source](https://github.com/ferrous-systems/rust-training))
 - [Exercises](https://github.com/ferrous-systems/rust-exercises)
-- [Teaching Material (legacy)](https://ferrous-systems.github.io/teaching-material/)
+- [Legacy slides](https://ferrous-systems.github.io/teaching-material/) / ([source](https://github.com/ferrous-systems/teaching-material))
 
 ### Tools
 - [Rust Playground](https://play.rust-lang.org/)
