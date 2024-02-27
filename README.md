@@ -107,6 +107,13 @@
 </details>
 
 <details open>
+<summary>Day 5</summary>
+
+- [TCP Server](src/tcp_server.rs) (improved)
+
+</details>
+
+<details open>
 <summary>Day 6</summary>
 
 - [Async Await](src/async_await.rs)
