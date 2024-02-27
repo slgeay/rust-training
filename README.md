@@ -106,6 +106,13 @@
 
 </details>
 
+<details open>
+<summary>Day 6</summary>
+
+- [Async Await](src/async_await.rs)
+
+</details>
+
 
 ## Further Reading
 
