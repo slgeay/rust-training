@@ -26,7 +26,7 @@ async fn handle_client(
 }
 
 #[tokio::main]
-async fn main() -> Result<(), io::Error> {
+pub async fn main() -> Result<(), io::Error> {
     let log = Arc::new(Mutex::new(vec![]));
 
     let listener = TcpListener::bind("127.0.0.1:7878").await?;
