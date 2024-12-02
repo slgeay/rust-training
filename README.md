@@ -31,7 +31,7 @@
 <summary>Course, exercices, docs</summary>
 
 ### Course
-- [Slides](https://listochkin.ngrok-free.app/slides/) / ([source](https://github.com/ferrous-systems/rust-training))
+- [Slides](https://rust-training.ferrous-systems.com/) / ([source](https://github.com/ferrous-systems/rust-training))
 - [Exercises](https://github.com/ferrous-systems/rust-exercises)
 - [Legacy slides](https://ferrous-systems.github.io/teaching-material/) / ([source](https://github.com/ferrous-systems/teaching-material))
 
