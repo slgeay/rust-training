@@ -50,6 +50,7 @@
 - [Rust Cheatsheet](https://cheats.rs/)
 - [The Little Book of Rust Books](https://lborb.github.io/book/)
 - [Lib.rs](https://lib.rs/)
+- [Blessed.rs - Unofficial guide to the Rust ecosystem](https://blessed.rs/crates)
 
 
 </details>
